@@ -1,0 +1,487 @@
+/* CSS Personalizado para o projeto Recicle Consciente */
+
+/* Cores Personalizadas */
+:root {
+    --brown-color: #8B4513;
+    --green-gradient-start: #2ECC71;
+    --green-gradient-end: #27AE60;
+}
+
+/* Estilos Gerais */
+body {
+    padding-top: 76px; /* Altura da barra de navegação */
+}
+
+.text-brown {
+    color: var(--brown-color) !important;
+}
+
+/* Barra de Navegação */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bs-success) !important;
+}
+
+/* Seção Principal (Hero) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/background-secao-principal.jpg');
+
+    /* Ajustes para a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos das Seções */
+h2 {
+    color: var(--bs-dark);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--bs-success);
+}
+
+/* Abas de Tipos de Lixo */
+.nav-pills .nav-link {
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+
+.nav-pills .nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-pills .nav-link.active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cores específicas para as abas */
+#plastic-tab.active, #plastic-tab:hover {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+#paper-tab.active, #paper-tab:hover {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
+#metal-tab.active, #metal-tab:hover {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+#glass-tab.active, #glass-tab:hover {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+#organic-tab.active, #organic-tab:hover {
+    background-color: #8B4513 !important;
+    border-color: #8B4513 !important;
+}
+
+#non-recyclable-tab.active, #non-recyclable-tab:hover {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+/* Estilos para abas inativas */
+.nav-pills .nav-link:not(.active) {
+    background-color: transparent !important;
+    color: #6c757d !important;
+    border: 2px solid #dee2e6;
+}
+
+/* Animação do ícone da lixeira */
+.trash-bin-icon i {
+    transition: all 0.3s ease;
+}
+
+.card:hover .trash-bin-icon i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Caixa de estatísticas */
+.stat-box {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    color: var(--bs-dark);
+    font-weight: bold;
+}
+
+.stat-box p {
+    color: var(--bs-secondary);
+    font-size: 0.9rem;
+}
+
+/* Animações do conteúdo das abas */
+.tab-pane {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Espaçamento dos itens da lista */
+.list-unstyled li {
+    padding: 5px 0;
+}
+
+/* Estilos personalizados para alertas */
+.alert-info {
+    border-left: 4px solid var(--bs-info);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.alert-warning {
+    border-left: 4px solid var(--bs-warning);
+    background-color: rgba(255, 193, 7, 0.05);
+}
+
+/* Ajustes responsivos para as abas */
+@media (max-width: 768px) {
+    .nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .nav-pills::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .nav-pills .nav-link {
+        white-space: nowrap;
+        margin: 0 2px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .trash-bin-icon i {
+        font-size: 5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-pills .nav-link {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .nav-pills .nav-link i {
+        display: none;
+    }
+}
+
+/* Estilos do Jogo */
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-stat {
+    padding: 10px;
+    background-color: var(--bs-light);
+    border-radius: 10px;
+}
+
+.bin {
+    min-height: 120px;
+    background-color: #f8f9fa;
+    border-style: solid;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bin:hover {
+    transform: scale(1.05);
+}
+
+.bin.drag-over {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #e8f5e9;
+}
+
+.bin.correct-drop {
+    animation: correctDrop 0.5s ease;
+    background-color: #d4edda;
+}
+
+.bin.wrong-drop {
+    animation: wrongDrop 0.5s ease;
+    background-color: #f8d7da;
+}
+
+@keyframes correctDrop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongDrop {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.items-container {
+    min-height: 150px;
+    border: 2px dashed #dee2e6;
+}
+
+.draggable-item {
+    cursor: grab;
+    user-select: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid #dee2e6;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+}
+
+.draggable-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.draggable-item.dragging {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.draggable-item i {
+    margin-right: 5px;
+}
+
+/* Pontos de Coleta */
+.collection-point .card {
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.collection-point .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.collection-info p {
+    font-size: 0.95rem;
+}
+
+.collection-info i {
+    color: var(--bs-success);
+    font-size: 1.1rem;
+}
+
+/* Botões de Filtro */
+.btn-outline-success {
+    border-width: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-success.active {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+}
+
+/* Accordion (Sanfona) */
+.accordion-button {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-success);
+    color: white;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Estilos de Notificação (Toast) */
+.toast {
+    min-width: 250px;
+}
+
+.toast.success {
+    background-color: var(--bs-success);
+    color: white;
+}
+
+.toast.error {
+    background-color: var(--bs-danger);
+    color: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        min-height: 400px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .bin {
+        min-height: 100px;
+    }
+    
+    .bin i {
+        font-size: 2rem !important;
+    }
+    
+    .collection-info p {
+        font-size: 0.85rem;
+    }
+    
+    .accordion-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .game-stat h5 {
+        font-size: 1rem;
+    }
+    
+    .draggable-item {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Rolagem Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animação de Carregamento (Loading) */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Barra de Rolagem Personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-success);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green-gradient-end);
+}

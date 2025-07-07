@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicle Consciente - Reciclagem e TI Verde</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-success fw-bold" href="#">
+                <i class="bi bi-recycle"></i> Recicle Consciente
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tipos-de-lixo">Tipos de Lixo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#papa-entulho">Papa-Entulho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ti-verde">TI Verde</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#jogo">Jogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pontos-de-coleta">Pontos de Coleta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-section text-white text-center py-5 mt-5">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-4">Recicle Consciente, Preserve o Futuro</h1>
+            <p class="lead mb-4">Aprenda a separar corretamente o lixo e descarte eletrônicos de forma responsável</p>
+            <a href="#tipos-de-lixo" class="btn btn-light btn-lg rounded-pill px-4">
+                Comece Agora <i class="bi bi-arrow-down-circle ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="tipos-de-lixo" class="py-5 mt-5"><br><br>
+        <div class="container">
+            <h2 class="text-center mb-5">Tipos de Lixo e Cores da Separação</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-4">
+                        <p class="lead">A separação correta do lixo é fundamental para o processo de reciclagem e preservação do meio ambiente. No Brasil, seguimos um padrão de cores estabelecido pela Resolução CONAMA nº 275/2001, que facilita a identificação e o descarte adequado de cada tipo de material.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <ul class="nav nav-pills nav-fill mb-4" id="trashTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active text-white" id="plastic-tab" data-bs-toggle="tab" data-bs-target="#plastic" type="button" role="tab" style="background-color: #dc3545;">
+                                <i class="bi bi-cup-straw me-2"></i>Plástico
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-white" id="paper-tab" data-bs-toggle="tab" data-bs-target="#paper" type="button" role="tab" style="background-color: #0d6efd;">
+                                <i class="bi bi-newspaper me-2"></i>Papel
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-dark" id="metal-tab" data-bs-toggle="tab" data-bs-target="#metal" type="button" role="tab" style="background-color: #ffc107;">
+                                <i class="bi bi-archive me-2"></i>Metal
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-white" id="glass-tab" data-bs-toggle="tab" data-bs-target="#glass" type="button" role="tab" style="background-color: #198754;">
+                                <i class="bi bi-cup me-2"></i>Vidro
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-white" id="organic-tab" data-bs-toggle="tab" data-bs-target="#organic" type="button" role="tab" style="background-color: #8B4513;">
+                                <i class="bi bi-tree me-2"></i>Orgânico
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-white" id="non-recyclable-tab" data-bs-toggle="tab" data-bs-target="#non-recyclable" type="button" role="tab" style="background-color: #6c757d;">
+                                <i class="bi bi-trash me-2"></i>Rejeito
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="trashTabContent">
+                        <div class="tab-pane fade show active" id="plastic" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-danger">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-danger mt-3">VERMELHO</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Plástico - Lixeira Vermelha</h4>
+                                            <p>O plástico é um dos materiais mais presentes em nosso dia a dia e também um dos que mais tempo leva para se decompor na natureza - podendo chegar a 400 anos. Por isso, sua reciclagem é extremamente importante.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>O que PODE ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check text-success me-2"></i>Garrafas PET (refrigerantes, água, sucos)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Embalagens de produtos de limpeza e higiene</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Sacolas plásticas</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Potes de alimentos (margarina, requeijão, iogurte)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Tampas plásticas</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Baldes e bacias</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Copos descartáveis</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>O que NÃO pode ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Adesivos e etiquetas</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Espuma e isopor sujo</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Acrílico</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Embalagens metalizadas (salgadinhos)</li>
+                                            </ul>
+
+                                            <div class="alert alert-info mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Dica Importante!</h6>
+                                                <p class="mb-0">Sempre lave as embalagens plásticas antes de descartá-las. Restos de alimentos podem contaminar outros materiais e prejudicar o processo de reciclagem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="paper" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-primary">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-primary mt-3">AZUL</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Papel - Lixeira Azul</h4>
+                                            <p>O papel é um dos materiais mais recicláveis que existem. Uma tonelada de papel reciclado pode poupar de 15 a 20 árvores, além de economizar 50% de água e energia no processo de produção.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>O que PODE ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check text-success me-2"></i>Jornais e revistas</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Folhas de caderno e papel sulfite</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Caixas de papelão</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Cartolinas e papel cartão</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Envelopes</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Livros velhos</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Embalagens de papel</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>O que NÃO pode ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel higiênico e guardanapos usados</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papéis engordurados (caixas de pizza)</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel carbono</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Fotografias</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel celofane</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel metalizado</li>
+                                            </ul>
+
+                                            <div class="alert alert-info mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Dica Importante!</h6>
+                                                <p class="mb-0">Papéis molhados ou sujos com gordura perdem suas propriedades e não podem ser reciclados. Mantenha-os secos e limpos!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="metal" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-warning">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-warning mt-3">AMARELO</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Metal - Lixeira Amarela</h4>
+                                            <p>Os metais são 100% recicláveis e podem ser reciclados infinitas vezes sem perder suas propriedades. A reciclagem de alumínio, por exemplo, economiza 95% da energia necessária para produzir alumínio novo.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>O que PODE ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check text-success me-2"></i>Latas de alumínio (refrigerante, cerveja)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Latas de alimentos (conservas, leite em pó)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Tampas de garrafa</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Papel alumínio limpo</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Embalagens de marmita</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Fios e arames</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Pregos e parafusos</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>O que NÃO pode ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Esponjas de aço</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Latas de tinta ou verniz</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Latas de aerossol</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Clips e grampos (muito pequenos)</li>
+                                            </ul>
+
+                                            <div class="alert alert-info mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Dica Importante!</h6>
+                                                <p class="mb-0">Amasse as latas de alumínio para economizar espaço, mas não amasse latas de aço. Isso facilita a separação no processo de reciclagem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="glass" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-success">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-success mt-3">VERDE</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Vidro - Lixeira Verde</h4>
+                                            <p>O vidro é 100% reciclável e pode ser reciclado infinitas vezes. Uma tonelada de vidro reciclado evita a extração de 1,3 tonelada de areia, além de economizar energia e reduzir a emissão de CO2.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>O que PODE ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check text-success me-2"></i>Garrafas de bebidas</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Potes de alimentos (conservas, geleias)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Frascos de remédios e perfumes</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Cacos de vidro</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Copos de vidro</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>O que NÃO pode ser reciclado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Espelhos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Vidros de janelas e box</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Lâmpadas</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Cristais</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Vidros temperados</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Ampolas de remédios</li>
+                                            </ul>
+
+                                            <div class="alert alert-info mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Dica Importante!</h6>
+                                                <p class="mb-0">Embale vidros quebrados em jornal ou papelão e identifique como "vidro quebrado" para proteger os coletores. Separe por cores quando possível.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="organic" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-brown">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-brown mt-3">MARROM</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Orgânico - Lixeira Marrom</h4>
+                                            <p>Os resíduos orgânicos representam cerca de 50% do lixo doméstico. Quando descartados corretamente, podem ser transformados em adubo através da compostagem, retornando nutrientes ao solo.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>O que PODE ser compostado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-check text-success me-2"></i>Restos de frutas e vegetais</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Cascas de ovos</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Borra de café e sachês de chá</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Folhas secas e podas de jardim</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Restos de alimentos cozidos (em pequena quantidade)</li>
+                                                <li><i class="bi bi-check text-success me-2"></i>Guardanapos de papel usados</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>O que NÃO deve ser compostado:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Carnes e ossos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Laticínios</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Óleos e gorduras</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Fezes de animais domésticos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel higiênico usado</li>
+                                            </ul>
+
+                                            <div class="alert alert-info mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-lightbulb me-2"></i>Dica Importante!</h6>
+                                                <p class="mb-0">Você pode fazer compostagem doméstica! Use uma composteira ou até mesmo um vaso grande com furos. Em 2-3 meses você terá adubo natural para suas plantas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="non-recyclable" role="tabpanel">
+                            <div class="card border-0 shadow">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                                            <div class="trash-bin-icon text-secondary">
+                                                <i class="bi bi-trash3-fill" style="font-size: 8rem;"></i>
+                                            </div>
+                                            <h3 class="text-secondary mt-3">CINZA</h3>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4 class="mb-3">Rejeitos - Lixeira Cinza</h4>
+                                            <p>Os rejeitos são materiais que ainda não possuem tecnologia viável para reciclagem ou que estão contaminados. Eles devem ser destinados aos aterros sanitários.</p>
+                                            
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i>Exemplos de rejeitos:</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-x text-danger me-2"></i>Papel higiênico e fraldas descartáveis</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Absorventes e cotonetes</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Preservativos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Esponjas de limpeza</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Isopor sujo</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Fotografias</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Espelhos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Adesivos</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Cerâmica e porcelana</li>
+                                                <li><i class="bi bi-x text-danger me-2"></i>Cigarros e bitucas</li>
+                                            </ul>
+
+                                            <h5 class="mt-4 mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Por que é importante separar os rejeitos?</h5>
+                                            <p>A separação correta dos rejeitos evita a contaminação dos materiais recicláveis, garantindo que o processo de reciclagem seja eficiente. Materiais contaminados podem inviabilizar a reciclagem de todo um lote.</p>
+
+                                            <div class="alert alert-warning mt-4" role="alert">
+                                                <h6 class="alert-heading"><i class="bi bi-exclamation-circle me-2"></i>Atenção!</h6>
+                                                <p class="mb-0">Sempre que tiver dúvida sobre um material, opte por descartá-lo como rejeito. É melhor garantir que os recicláveis permaneçam limpos e aproveitáveis.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<br>
+                    <div class="row mt-10">
+                        <div class="col-lg-12">
+                            <div class="card bg-light border-0">
+                                <div class="card-body p-4">
+                                    <h5 class="text-center mb-4">Você Sabia?</h5>
+                                    <div class="row text-center">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="stat-box">
+                                                <i class="bi bi-recycle display-4 text-success"></i>
+                                                <h3 class="mt-2">30%</h3>
+                                                <p>do lixo doméstico pode ser reciclado</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="stat-box">
+                                                <i class="bi bi-tree-fill display-4 text-success"></i>
+                                                <h3 class="mt-2">1 ton</h3>
+                                                <p>de papel reciclado salva 17 árvores</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="stat-box">
+                                                <i class="bi bi-lightning-fill display-4 text-warning"></i>
+                                                <h3 class="mt-2">95%</h3>
+                                                <p>de economia de energia ao reciclar alumínio</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="stat-box">
+                                                <i class="bi bi-droplet-fill display-4 text-primary"></i>
+                                                <h3 class="mt-2">50%</h3>
+                                                <p>de economia de água na reciclagem</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="papa-entulho" class="py-5 mt-5 bg-light">
+        <div class="container"><br><br>
+            <h2 class="text-center mb-5">Papa-Entulho</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 text-center mb-3 mb-md-0">
+                                    <i class="bi bi-truck display-1 text-success"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="text-success mb-3">O que é Papa-Entulho?</h4>
+                                    <p class="lead">O papa-entulho é o espaço adequado para o descarte de restos de obra, móveis velhos e outros volumosos (exceto eletrônicos), restos de poda, material reciclável e óleo de cozinha usado (acondicionado em garrafas plásticas).</p>
+                                    <div class="alert alert-success" role="alert">
+                                        <i class="bi bi-clock me-2"></i><strong>Horário de Funcionamento:</strong> Segunda a Sábado, das 7h às 18h
+                                        <br>
+                                        <i class="bi bi-box-seam me-2"></i><strong>Volume Máximo:</strong> 1m³ por descarga (equivalente a uma caixa d'água de mil litros)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="bi bi-check-circle me-2"></i>O que PODE ser descartado</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Restos de obra e construção civil (até 1m³)</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Móveis velhos e inservíveis</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Restos de poda e galhadas</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Material reciclável</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Óleo de cozinha usado (em garrafas plásticas)</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Outros volumosos (exceto eletrônicos)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0"><i class="bi bi-x-circle me-2"></i>O que NÃO pode ser descartado</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Resíduos com volume superior a 1m³</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Resíduos de serviços de saúde</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Lixo eletrônico e eletrodomésticos</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Resíduos orgânicos</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Resíduos industriais e perigosos</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Cargas predominantes de gesso</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Materiais especiais (espelhos, lâmpadas, pilhas, baterias, amianto, tonner)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row mt-10">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-warning" role="alert">
+                        <h5 class="alert-heading"><i class="bi bi-exclamation-triangle me-2"></i>Informações Importantes</h5>
+                        <ul class="mb-0">
+                            <li>Não é permitida a entrada de cargas em caminhões ou carretas</li>
+                            <li>O SLU não realiza serviço de busca de inservíveis a domicílio</li>
+                            <li>Os materiais recebidos são encaminhados para reciclagem, doação ou destinação adequada</li>
+                            <li>Móveis em bom estado são doados para entidades assistenciais cadastradas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ti-verde" class="py-5 mt-5 bg-light">
+        <div class="container"><br><br>
+            <h2 class="text-center mb-5">TI Verde</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-5">Tecnologia da Informação Verde é um conjunto de práticas sustentáveis para reduzir o impacto ambiental da tecnologia.</p>
+                    
+                    <div class="accordion" id="tiVerdeAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="bi bi-info-circle me-2"></i> O que é TI Verde?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#tiVerdeAccordion">
+                                <div class="accordion-body">
+                                    <p>TI Verde refere-se ao uso ambientalmente responsável de computadores e recursos relacionados. Inclui:</p>
+                                    <ul>
+                                        <li>Redução do consumo de energia</li>
+                                        <li>Descarte adequado de equipamentos eletrônicos</li>
+                                        <li>Uso de materiais recicláveis</li>
+                                        <li>Virtualização de servidores</li>
+                                        <li>Computação em nuvem</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-pc-display me-2"></i> Como descartar eletrônicos corretamente?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#tiVerdeAccordion">
+                                <div class="accordion-body">
+                                    <p>O descarte correto de eletrônicos é fundamental:</p>
+                                    <ol>
+                                        <li><strong>Faça backup</strong> dos seus dados antes do descarte</li>
+                                        <li><strong>Delete</strong> todas as informações pessoais</li>
+                                        <li><strong>Procure</strong> pontos de coleta especializados</li>
+                                        <li><strong>Considere doar</strong> se o equipamento ainda funciona</li>
+                                        <li><strong>Nunca jogue</strong> no lixo comum</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-lightbulb me-2"></i> Dicas de economia de energia
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#tiVerdeAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Configure o modo de economia de energia em seus dispositivos</li>
+                                        <li>Desligue monitores quando não estiver usando</li>
+                                        <li>Use iluminação LED em vez de lâmpadas tradicionais</li>
+                                        <li>Prefira notebooks a desktops quando possível</li>
+                                        <li>Mantenha equipamentos limpos para melhor eficiência</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="jogo" class="py-5 mt-5 bg-light">
+        <div class="container"><br><br>
+            <h2 class="text-center mb-5">Jogo da Reciclagem</h2>
+            <div class="game-container bg-white rounded-4 shadow p-4">
+                <div class="row mb-4">
+                    <div class="col-md-4 text-center">
+                        <div class="game-stat">
+                            <i class="bi bi-trophy-fill text-warning fs-3"></i>
+                            <h5 class="mb-0">Pontos: <span id="score">0</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="game-stat">
+                            <i class="bi bi-heart-fill text-danger fs-3"></i>
+                            <h5 class="mb-0">Vidas: <span id="lives">3</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="game-stat">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h5 class="mb-0">Acertos: <span id="correct">0</span></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4" id="binsContainer">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="plastic" style="border-color: #dc3545;">
+                            <i class="bi bi-trash3-fill fs-1 text-danger"></i>
+                            <p class="mb-0 small">Plástico</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="paper" style="border-color: #0d6efd;">
+                            <i class="bi bi-trash3-fill fs-1 text-primary"></i>
+                            <p class="mb-0 small">Papel</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="metal" style="border-color: #ffc107;">
+                            <i class="bi bi-trash3-fill fs-1 text-warning"></i>
+                            <p class="mb-0 small">Metal</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="glass" style="border-color: #198754;">
+                            <i class="bi bi-trash3-fill fs-1 text-success"></i>
+                            <p class="mb-0 small">Vidro</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="organic" style="border-color: #8B4513;">
+                            <i class="bi bi-trash3-fill fs-1 text-brown"></i>
+                            <p class="mb-0 small">Orgânico</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="bin border-3 rounded-3 p-3 text-center" data-type="non-recyclable" style="border-color: #6c757d;">
+                            <i class="bi bi-trash3-fill fs-1 text-secondary"></i>
+                            <p class="mb-0 small">Não Reciclável</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="items-container bg-light rounded-3 p-3 mb-4 min-vh-25" id="itemsContainer">
+                    <p class="text-center text-muted mb-0">Clique em "Iniciar Jogo" para começar</p>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success btn-lg me-2" onclick="startGame()">
+                        <i class="bi bi-play-circle me-2"></i>Iniciar Jogo
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="resetGame()">
+                        <i class="bi bi-arrow-clockwise me-2"></i>Reiniciar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="pontos-de-coleta" class="py-5 mt-5">
+        <div class="container"><br><br>
+            <h2 class="text-center mb-5">Pontos de Coleta Especiais</h2>
+            
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <button class="btn btn-outline-success active" onclick="filterPoints('all')">Todos</button>
+                <button class="btn btn-outline-success" onclick="filterPoints('batteries')">
+                    <i class="bi bi-battery-full"></i> Pilhas e Baterias
+                </button>
+                <button class="btn btn-outline-success" onclick="filterPoints('medicine')">
+                    <i class="bi bi-capsule"></i> Medicamentos
+                </button>
+                <button class="btn btn-outline-success" onclick="filterPoints('electronics')">
+                    <i class="bi bi-pc-display"></i> Eletrônicos
+                </button>
+                <button class="btn btn-outline-success" onclick="filterPoints('oil')">
+                    <i class="bi bi-droplet-fill"></i> Óleo de Cozinha
+                </button>
+                <button class="btn btn-outline-success" onclick="filterPoints('rubble')">
+                    <i class="bi bi-trash-fill"></i> Entulho e Itens Volumosos
+                </button>
+            </div>
+
+            <div class="row g-4" id="collectionPoints">
+                <div class="col-md-6 col-lg-4 collection-point" data-category="batteries">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-battery-full"></i> Supermercado Extra - Asa Sul
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Pilhas e Baterias</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>SGAS 915, Bloco A - Asa Sul</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Dom: 8h às 22h</p>
+                                <p class="mb-0"><i class="bi bi-telephone me-2"></i>(61) 3345-6789</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="medicine">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-capsule"></i> Drogaria Rosário - Asa Norte
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Medicamentos vencidos</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>CLN 202, Bloco B - Asa Norte</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sex: 8h às 20h | Sáb: 8h às 18h</p>
+                                <p class="mb-0"><i class="bi bi-info-circle me-2"></i>Retire bulas e embalagens</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="electronics">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-pc-display"></i> Cooperativa Recicla DF
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Eletrônicos e E-lixo</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>SIA Trecho 17, Rua 08, Lote 170</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sex: 8h às 17h</p>
+                                <p class="mb-0"><i class="bi bi-truck me-2"></i>Coleta gratuita acima de 10 itens</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="oil">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-droplet-fill"></i> Posto BR - Lago Sul
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Óleo de cozinha usado</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>SHIS QI 11, Bloco O - Lago Sul</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>24 horas</p>
+                                <p class="mb-0"><i class="bi bi-recycle me-2"></i>Troque por produtos de limpeza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="batteries">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-battery-full"></i> Carrefour - Taguatinga
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Pilhas, Baterias e Lâmpadas</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QS 1, Rua 212 - Taguatinga</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Dom: 9h às 22h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="medicine">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">
+                                <i class="bi bi-capsule"></i> UBS 01 - Ceilândia
+                            </h5>
+                            <div class="collection-info">
+                                <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Medicamentos</p>
+                                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QNN 27, Área Especial - Ceilândia</p>
+                                <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sex: 7h às 17h</p>
+                                <p class="mb-0"><i class="bi bi-person-badge me-2"></i>Consulte a farmácia da unidade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Asa Sul</h5>
+                            <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Avenida das Nações L4 Sul</p>
+                            <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo à UNIEURO</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Águas Claras</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Avenida Jacarandá, Lote 24</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo à Subestação de Furnas</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Ceilândia - QNN 29</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QNN 29 Módulos G a K Área Especial</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo ao IESB e Ceilândia Mall</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Ceilândia - P Sul</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QNP 28/24, Área Especial – P Sul</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo ao Terminal Rodoviário do P Sul</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Taguatinga</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QNG 47 Área Especial nº 09</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo à passarela da BR 070</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Samambaia Norte</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>QR 608 de Samambaia Norte</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Ao lado do Conjunto 07</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Gama - Setor Norte</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Av. Contorno Norte, AE 02, Lote 02</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Ao lado do DETRAN do Gama</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Guará - CAVE</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>SRIA IIA QE 25 Área Especial do CAVE</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo à Feira do Guará</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Sobradinho</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Quadra 10, Área Especial 01</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Atrás do CEF 05</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Planaltina</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Área Especial 02, lote 11/12 Setor Norte</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Próximo ao Batalhão da PMDF</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 collection-point" data-category="rubble">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-trash-fill"></i> Papa-Entulho: Recanto das Emas</h5>
+                             <p class="mb-2"><i class="bi bi-box-seam me-2"></i>Coleta: Entulho, móveis e pneus (até 1m³)</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Av. Recanto das Emas Q. 206/300</p>
+                             <p class="mb-2"><i class="bi bi-clock me-2"></i>Seg-Sáb: 7h às 18h</p>
+                            <p class="mb-0"><small class="text-muted">Ao lado da Administração Regional</small></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Recicle Consciente - DF. Desenvolvido para promover a sustentabilidade no DF.</p>
+            <p class="mb-0 small">O projeto foi feito por Vanuza T. Ru: 649627 para a Atividade extensionista II.</p>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="gameToast" class="toast" role="alert">
+            <div class="toast-body">
+                <strong id="toastMessage"></strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
